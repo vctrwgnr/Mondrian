@@ -1,0 +1,97 @@
+/* Root Variables for Colors */
+:root {
+    --white: #F0F1EC;
+    --yellow: #F9D01E;
+    --red: #E72F24;
+    --blue: #004592;
+    --black: #000000;
+}
+
+/* General Styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    margin: 0;
+}
+
+/* Container Layout */
+.container {
+    display: grid;
+    height: 680px;
+    width: 670px;
+    gap: 10px;
+    background-color: var(--black);
+    grid-template-columns: 70px 170px 170px 85px 85px 40px;
+    grid-template-rows: 100px 150px 190px 60px 60px 60px;
+}
+
+/* Block Styling */
+.block {
+    background-color: var(--white);
+}
+
+.block-white {
+    background-color: var(--white);
+}
+
+.block-yellow {
+    background-color: var(--yellow);
+}
+
+.block-red {
+    background-color: var(--red);
+}
+
+.block-blue {
+    background-color: var(--blue);
+}
+
+.block-black {
+    background-color: var(--black);
+}
+
+/* Grid Spanning */
+.span-2 {
+    grid-column: span 2;
+}
+
+.row-span-2 {
+    grid-row: span 2;
+}
+
+.row-span-3 {
+    grid-row: span 3;
+}
+
+/* Text Styling */
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.text h1 {
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    padding-top: 10px;
+}
+
+.text h2 {
+    font-size: 40px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .text h1, .text h2 {
+        font-size: smaller;
+    }
+}
